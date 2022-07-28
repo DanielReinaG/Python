@@ -1,0 +1,27 @@
+// PRIMERA OPCION
+//len es la longitud o cantidad de la cadena de caracteres
+
+lista_vocales = ["a", "e", "i", "o", "u"]
+frase = input("Escriba una frase: ")
+vocales_filtradas = " "
+
+for letra in frase.lower():
+    if letra in lista_vocales:
+      vocales_filtradas += letra
+      
+print("LA CANTIDAD DE VOCALES ES: ")
+print(len(vocales_filtradas))
+
+//SEGUNDA OPCION
+frase = input("Ingrese una frase ")
+vocales=[]
+total=0
+
+for i in ["a", "e", "i", "o", "u"]:
+    vocales.append(frase.count(i))
+    total+=frase.count(i)
+
+print("Vocales a:",vocales[0], ", Vocales e:", vocales[1], 
+      ", Vocales i:",vocales[2], ", Vocales o:",vocales[3], 
+      ", Vocales U:", vocales[4],
+      ", Total de Vocales:", total)
