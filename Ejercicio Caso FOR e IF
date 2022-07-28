@@ -1,0 +1,52 @@
+//Escribir un programa que permita al usuario ingresar 6 numeros enteros, que pueden ser positivos o negativos. Al finalizar, mostrar la sumatoria de los numeros negativos y el promedio de los postivios.
+
+numero1, numero2, numero3, numero4, numero5, numero6 = input("Escribe seis (6) numeros enteros positivos y/o negativos: "). split()
+numero1 = int(numero1)
+numero2 = int(numero2)
+numero3 = int(numero3)
+numero4 = int(numero4)
+numero5 = int(numero5)
+numero6 = int(numero6)
+lista_numeros = [numero1, numero2,numero3, numero4, numero5, numero6]
+
+//Funcion Numeros Impares
+def extraer_impares (lista1):
+  impares = []
+
+  for numero in lista1:
+    if numero % 2 != 0:
+      impares.append(numero)
+  
+  return impares
+resultado_impares = extraer_impares(lista_numeros)
+print("LOS NUMEROS IMPARES SON: ", resultado_impares)
+
+suma_impares = 0
+numero = 0
+
+for numero in lista_numeros:
+  if numero % 2 !=0:
+    suma_impares +=numero
+  numero +=1
+print("La suma de los numeros impares es: ", suma_impares)
+
+//Funcion Numeros Pares
+print("----------------------------------------")
+print("NUMEROS PARES")
+def extraer_pares(lista):
+  pares = []
+
+  for numero in lista:
+    if numero % 2 == 0:
+      pares.append(numero)
+  return pares
+resultado_pares =extraer_pares(lista_numeros)
+print("LOS NUMEROS PARES SON: ", resultado_pares)
+suma_pares = 0
+numero = 0
+
+for numero in lista_numeros:
+  if numero % 2 == 0:
+    suma_pares +=numero
+  numero +=1
+print("el promedio de los numeros impares es: ", (suma_pares/len(resultado_pares)))
