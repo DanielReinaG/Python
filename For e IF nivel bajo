@@ -1,0 +1,16 @@
+baraja = ( 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A")
+
+carta1, carta2, carta3, carta4, carta5 = input(). split ()
+mano = (carta1, carta2, carta3, carta4, carta5)
+
+repeticiones = 0
+
+for conteo in mano:
+  if mano.count(conteo)>repeticiones:
+    repeticiones = mano.count(conteo)
+    
+if repeticiones>=4:
+  print("POKER")
+
+else:
+  print("NO TIENES UN POKER")
